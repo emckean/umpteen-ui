@@ -1,0 +1,11 @@
+{
+  "name": "umpteen-ui",
+  "private": "true",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "express": "^4.6.1",
+    "jade": "^1.4.2"
+  }
+}

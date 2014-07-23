@@ -1,0 +1,16 @@
+extends layout.jade
+
+block content
+	h1 Umpteen
+	p Here's how to use umpteen:
+
+	h1 What's your number?
+
+	form.pure-form
+		fieldset
+			input(type="string" name="number" 			placeholder="12345" autofocus required)
+			| &nbsp;
+			button.pure-button.pure-button-primary(type="submit") Umpteen me!
+
+	script(src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js")
+	script(src="/the.js")
