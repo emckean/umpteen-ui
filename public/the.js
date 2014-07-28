@@ -1,12 +1,11 @@
 $(function() {
-	var $h1 = $("h1");
+	var $h2 = $("h2");
 	var $umpNumber = $("input[name='number']");
 
 	$("form").on("submit", function(event) {
 		event.preventDefault();
 		var number = $.trim($umpNumber.val());
-		console.log(number);
-		$h1.text("Loading ...");
+		$h2.text("Loading ...");
 
 		var request = $.ajax({
 			url: "/" + number,
@@ -14,12 +13,12 @@ $(function() {
 		});
 
 		request.done(function(data){
-			var umpteenedNum = data.number;
-			console.log(umpteenedNum);
-			$h1.text(umpteenedNum);
+			console.log(data);
+			var umpteenedNum = data;
+			$h2.text(umpteenedNum);
 		});
 		request.fail(function (){
-			$h1.text("Wow, something went wrong here.");
+			$h2.text("Wow, something went wrong here.");
 		});
 	});
 });

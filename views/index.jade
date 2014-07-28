@@ -1,16 +1,44 @@
-extends layout.jade
+doctype html
+html
+	head
+		meta(charset="utf-8")
+		meta(name="viewport" content="width=device-width, initial-scale=1")
+		title Umpteen
+		//stylesheets
+		link(rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css")
+		link(rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css")
+		//link(rel="stylesheet" href="jumbotron-narrow.css" )
+		//scripts
+		//script(src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js")	
+		script(src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js")
+		script(src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js")
+		script(src="/the.js")
+		
 
-block content
-	h1 Umpteen
-	p Here's how to use umpteen:
+	body
+			div.container
+				//div.header
+					//ul.nav.nav-pills.pull-right
+						//li Home
+						//li About
+						//li Contact
+				//h3.text-muted Umpteen
 
-	h1 What's your number?
+				div.jumbotron
+					h1 Umpteen
+					p.lead Here's how to use umpteen:
+						ul
+							li put a number in the box
+							li hit the button
+							li enjoy!
+						div.input-append
+							form
+									input.input-lg(width="140px" type="text" name="number" 			placeholder="12345" autofocus required)
+									| &nbsp;
+									button.btn-lg.btn-default(type="submit") Umpteen me!
+					
+						h2 here
 
-	form.pure-form
-		fieldset
-			input(type="string" name="number" 			placeholder="12345" autofocus required)
-			| &nbsp;
-			button.pure-button.pure-button-primary(type="submit") Umpteen me!
+		
 
-	script(src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js")
-	script(src="/the.js")
+		
