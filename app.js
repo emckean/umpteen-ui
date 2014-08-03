@@ -14,12 +14,18 @@ app.get("/", function(req, res){
 	res.render("index");
 })
 // this is all busted
-app.get(/^\/(\d{5})$/, function(req, res, next) {
+app.get(/^\/(.*?)$/, function(req, res, next) {
+  ///^\/(\d{5})$/
 	var myNum = req.params[0];
-  console.log(myNum);
-	var umpteenNum = umpteen.spellItOut(myNum);
-	console.log('hey here is umpteennum ' + umpteenNum);
-	res.send(umpteenNum);
+  // console.log("here's the input: " + myNum);
+	var umpteenNum = umpteen.finalFunction(myNum);
+  if (typeof umpteenNum === 'object') {
+    // console.log("it's an error!")
+    // console.log(umpteenNum.message);
+    res.send(umpteenNum.message);
+  } else {
+  	res.send(umpteenNum);
+  }
 });
 
 app.use(function(req, res){
