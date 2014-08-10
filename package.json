@@ -6,6 +6,7 @@
   },
   "dependencies": {
     "express": "^4.6.1",
-    "jade": "^1.4.2"
+    "jade": "^1.4.2",
+    "umpteen": "^0.1.0"
   }
 }
